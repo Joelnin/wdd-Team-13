@@ -7,6 +7,8 @@
 
  - https://byui-cse.github.io/wdd330-ww-course/week01/team.html
 
+ [Netlify Link](https://cerulean-muffin-b5d8f3.netlify.app/)
+
 ### Prerequisites
 
 - You must have Node installed to run the following commands.
