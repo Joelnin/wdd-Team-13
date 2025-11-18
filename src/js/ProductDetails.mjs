@@ -23,26 +23,31 @@ export default class ProductDetails {
 
     renderProductDetails() {
 
+        const product = this.product
+
+        let category = document.querySelector('.category-detail');
+        category.textContent = product.Category.charAt(0).toUpperCase() + product.Category.slice(1);
+
         let h3 = document.querySelector('.card__brand');
-        h3.textContent = this.product.Brand.Name;
+        h3.textContent = product.Brand.Name;
         
         let h2 = document.querySelector('.card__name');
-        h2.textContent = this.product.NameWithoutBrand;
+        h2.textContent = product.NameWithoutBrand;
 
         let productImage = document.getElementById('productImage');
-        productImage.src = this.product.Image;
-        productImage.alt = this.product.NameWithoutBrand;
+        productImage.src = product.Images.PrimaryLarge;
+        productImage.alt = product.NameWithoutBrand;
 
         let price = document.querySelector('.product-card__price');
-        price.textContent = this.product.FinalPrice;
+        price.textContent = `Price: $4${product.FinalPrice}`;
         
         let color = document.querySelector('.product__color');
-        color.textContent = this.product.Colors[0].ColorName;
+        color.textContent = `Color(s): ${product.Colors[0].ColorName}`;
 
         let description = document.querySelector('.product__description')
-        description.innerHTML = this.product.DescriptionHtmlSimple;
+        description.innerHTML = `Descripton: ${product.DescriptionHtmlSimple}`;
 
         let addToCart = document.getElementById('addToCart')
-        addToCart.dataset.id = this.product.Id;
+        addToCart.dataset.id = product.Id;
     }
 }

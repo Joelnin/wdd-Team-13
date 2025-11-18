@@ -210,6 +210,7 @@ button {
   font-size: var(--small-font);
   /* max-height: 120px; */
   align-items: center;
+  width: 100%;
 }
 
 .cart-card__image {
@@ -239,6 +240,43 @@ button {
 .cart-card__price {
   grid-row: 2;
   grid-column: 3;
+}
+
+/* Category Cards */
+
+#categories-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin: 10px 0;
+  box-shadow: 1px 1px 5px var(--primary-color);
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.category-item {
+  justify-items: center;
+}
+
+#categories-flex a {
+  padding: 10px;
+  display: block;
+  width: 100px;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.cart-footer {
+  margin-top: 20px;
+  padding: 15px;
+  border-top: 2px solid #ccc;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 500px) {
