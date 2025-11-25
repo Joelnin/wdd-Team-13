@@ -11,8 +11,7 @@ checkout.init();
 document.querySelector("#zip").addEventListener("blur", checkout.calculateOrderTotal.bind(checkout));
 
 // listening for click on the button
-document.querySelector("#checkoutSubmit").addEventListener("click", (e) => {
-  e.preventDefault();
-
+document.querySelector("#checkoutForm").addEventListener("submit", (event) => {
+  event.preventDefault();
   checkout.checkout();
 });

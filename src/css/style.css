@@ -291,19 +291,19 @@ button,
   box-shadow: 0 2px 10px var(--secondary-color);
 }
 
-#checkout-form {
+#checkoutForm {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-#checkout-form label {
+#checkoutForm label {
   font-weight: bold;
   color: black;
   font-size: 1.2rem;
 }
 
-#checkout-form input {
+#checkoutForm input {
   padding: .7rem;
   border-radius: 5px;
   border: 1px solid var(--primary-color);

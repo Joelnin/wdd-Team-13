@@ -23,13 +23,15 @@
       <div>
       <div class="form-container">
 
-      <form id="checkout-form">
+      <form id="checkoutForm" name="checkoutForm">
+        <input type="hidden" name="orderDate" id="orderDate">
         <h2>Customer Information</h2>
 
-        <label for="firstName">First Name</label>
-        <input type="text" name="firstName" id="firstName" required />
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname" required />
 
-        <label for="lastName">Last Name</label>        <input type="text" name="lastName" id="lastName" required />
+        <label for="lname">Last Name</label>        
+        <input type="text" name="lname" id="lname" required />
 
         <h2>Address</h2>
 
@@ -50,11 +52,11 @@
         <label for="cardNumber">Credit Card Number</label>
         <input type="text" name="cardNumber" id="cardNumber" required />
 
-        <label for="expDate">Expiration Date (MM/YY)</label>
-        <input type="text" name="expDate" id="expDate" required />
+        <label for="expiration">Expiration Date (MM/YY)</label>
+        <input type="text" name="expiration" id="expiration" required />
 
-        <label for="securityCode">Security Code</label>
-        <input type="text" name="securityCode" id="securityCode" required />
+        <label for="code">Security Code</label>
+        <input type="text" name="code" id="code" required />
 
         <button type="submit" id="checkoutSubmit">Checkout</button>
       </form>
@@ -63,8 +65,8 @@
       <section class="order-summary">
         <h2>Order Summary</h2>
 
-        <p>Items: <span id="items-count"></span></p>
-        <p>Subtotal: <span id="subtotal"></span></p>
+        <p>Items: <span id="num-items"></span></p>
+        <p>Subtotal: <span id="cartTotal"></span></p>
         <p>Tax: <span id="tax"></span></p>
         <p>Shipping: <span id="shipping"></span></p>
         <p>Order Total: <span id="orderTotal"></span></p>
