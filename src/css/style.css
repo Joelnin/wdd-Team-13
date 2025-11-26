@@ -280,8 +280,7 @@ button,
   font-weight: bold;
 }
 
-
-.form-container, 
+.form-container,
 .order-summary {
   max-width: 550px;
   margin: 3rem auto;
@@ -291,24 +290,26 @@ button,
   box-shadow: 0 2px 10px var(--secondary-color);
 }
 
-#checkoutForm {
+#checkoutForm,
+#checkoutForm fieldset {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 1rem;
 }
 
-#checkoutForm label {
+#checkoutForm label,
+#checkoutForm legend {
   font-weight: bold;
   color: black;
   font-size: 1.2rem;
 }
 
 #checkoutForm input {
-  padding: .7rem;
+  padding: 0.7rem;
   border-radius: 5px;
   border: 1px solid var(--primary-color);
 }
-
 
 @media screen and (min-width: 500px) {
   body {
@@ -324,6 +325,19 @@ button,
     font-size: inherit;
     grid-template-columns: 150px auto 15%;
   }
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+  background-color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+}
+
+.alert > p {
+  margin: 0;
 }
 
 footer {
