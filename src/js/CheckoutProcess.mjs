@@ -46,9 +46,9 @@ export default class CheckoutProcess {
     // calculate and display the total dollar amount of the items in the cart, and the number of items.
     const orderSummary = document.querySelector(this.outputSelector);
 
-    const itemCount = this.list.length;
+    const itemCount = this.list.reduce((sum, item) => sum + (item.quantity || 1), 0);
     this.itemTotal = this.list.reduce(
-      (sum, item) => sum + item.FinalPrice,
+      (sum, item) => sum + (item.FinalPrice * item.quantity),
       0
     );
 
@@ -63,7 +63,8 @@ export default class CheckoutProcess {
     // calculate the tax and shipping amounts. Add those to the cart total to figure out the order total
 
     this.tax = this.itemTotal * 0.06;
-    this.shipping = 10 + (this.list.length - 1) * 2;
+    this.shipping = 10 + (this.list.reduce((sum, item) => sum + (item.quantity || 1), 0) - 1) * 2;
+    
     this.orderTotal = (
       
       parseFloat(this.itemTotal) +
